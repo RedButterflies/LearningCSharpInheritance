@@ -37,7 +37,7 @@ class Tiger : Animal
     }
     public void TigerFunction()
     {
-        Console.WriteLine("I have "+ numberOfStripes + "stripes.");
+        Console.WriteLine("I am a tiger, I have "+ numberOfStripes + " stripes.");
     }
 }
 
@@ -51,5 +51,9 @@ class Program
         cat.MakeSound();
         tiger.MakeSound();
 
+        cat.Introduction();
+        tiger.Introduction();
+
+        tiger.TigerFunction();
     }
 }
