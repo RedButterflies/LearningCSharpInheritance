@@ -40,6 +40,25 @@ class Tiger : Animal
         Console.WriteLine("I am a tiger, I have "+ numberOfStripes + " stripes.");
     }
 }
+//sealed class
+
+sealed class Bird
+{
+    public string featherColour;
+    public int featherNumber;
+
+    public Bird(string featherColour, int featherNumber)
+    {
+        this.featherColour= featherColour; 
+        this.featherNumber= featherNumber;
+    }
+
+    public void FlyingBird()
+    {
+        Console.WriteLine("I can fly!");
+    }
+
+}
 
 class Program
 {
@@ -47,6 +66,8 @@ class Program
     {
         Animal cat = new Animal("cat", "Bambino", 10, 85.5d, "meow");
         Tiger tiger = new Tiger("tiger", "Seran", 8, 905.6d, "Rawr!", 5);
+        Bird bird = new Bird("blue", 555);
+       
 
         cat.MakeSound();
         tiger.MakeSound();
@@ -55,5 +76,7 @@ class Program
         tiger.Introduction();
 
         tiger.TigerFunction();
+        bird.FlyingBird();
     }
+
 }
